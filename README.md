@@ -7,7 +7,7 @@ Este es un proyecto para una entrevista técnica (LOGO INTERVIEW).
 Una página web sencilla construida con:
 - HTML5
 - Tailwind CSS (vía CDN)
-- Google Fonts (Science Gothic, Roboto, Quicksand)
+- Google Fonts (Science Gothic)
 
 ## Estructura
 
