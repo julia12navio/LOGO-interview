@@ -1,63 +1,108 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGO INTERVIEW</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Science Gothic', 'Roboto', 'Quicksand', sans-serif;
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Science+Gothic:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Science Gothic"', 'Roboto', '"Quicksand"', 'sans-serif'],
+                    },
+                    animation: {
+                        marquee: 'marquee 20s linear infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(100%)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        }
+                    }
+                }
+            }
         }
-    </style>
+    </script>
+
 </head>
-<body>
 
-    <div>
-        <header>
-            <h1>Plain white shop</h1>
-        </header>
+<body class="font-sans text-black antialiased">
 
-        <main>
-            <div>
-                <div>
-                    <h2>Product<br>Circulizer</h2>
-                    <button>Add to cart</button>
-                </div>
-                <div>
-                    <h2>Darkshield<br>AI</h2>
-                    <button>Add to cart</button>
-                </div>
-                <div>
-                    <h2>Risk<br>Network</h2>
-                    <button>Add to cart</button>
-                </div>
-            </div>
-        </main>
-    </div>
+    <div class="h-[70vh] flex flex-col">
 
-    <section>
-        <div>
-            <div>
-                business 1 &nbsp;&nbsp; business 2 &nbsp;&nbsp; business 3 &nbsp;&nbsp; business 4 &nbsp;&nbsp; business 5 &nbsp;&nbsp; business 6 
+        <div class="h-1/2 bg-white flex items-center justify-center w-full">
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-center">Plain white shop</h1>
+        </div>
+
+        <div
+            class="h-1/2 bg-gradient-to-b from-gray-100 to-gray-300 flex items-center justify-center w-full border-t-2 border-black">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-3 gap-4 md:gap-12 max-w-4xl mx-auto">
+
+                    <div class="flex flex-col items-start space-y-4">
+                        <h2 class="text-xl md:text-3xl font-bold leading-tight">Product<br>Circulizer</h2>
+                        <button class="border-2 border-black bg-white text-black px-4 md:px-6 py-1 md:py-2 font-bold">
+                            Add to cart
+                        </button>
+                    </div>
+
+                    <div class="flex flex-col items-start space-y-4">
+                        <h2 class="text-xl md:text-3xl font-bold leading-tight">Darkshield<br>AI</h2>
+                        <button class="border-2 border-black bg-white text-black px-4 md:px-6 py-1 md:py-2 font-bold ">
+                            Add to cart
+                        </button>
+                    </div>
+
+                    <div class="flex flex-col items-start space-y-4">
+                        <h2 class="text-xl md:text-3xl font-bold leading-tight">Risk<br>Network</h2>
+                        <button class="border-2 border-black bg-white text-black px-4 md:px-6 py-1 md:py-2 font-bold ">
+                            Add to cart
+                        </button>
+                    </div>
+
+                </div>
             </div>
         </div>
-        <div>
-            used here,<br>
-            used there<br>
-            used everywhere
+    </div>
+
+    <section class="bg-white py-24 md:py-32 overflow-hidden relative border-t-2 border-black">
+
+        <div
+            class="absolute top-1/2 -translate-y-1/2 w-full opacity-10 pointer-events-none whitespace-nowrap overflow-hidden">
+            <div class="animate-marquee text-2xl font-bold">
+                business 1 &nbsp;&nbsp; business 2 &nbsp;&nbsp; business 3 &nbsp;&nbsp; business 4 &nbsp;&nbsp; business
+                5 &nbsp;&nbsp; business 6
+            </div>
+        </div>
+
+        <div class="relative z-10 text-center px-4">
+            <h2 class="text-4xl md:text-7xl font-black tracking-tighter leading-none">
+                used here,<br>
+                used there<br>
+                used everywhere
+            </h2>
         </div>
     </section>
 
-    <footer>
-        <div>copyright 2025</div>
-        <div>
-            <div>STARK INDUSTRIES</div>
-            <div></div>
+    <footer class="bg-white pb-10 pt-10 text-center">
+        <div class="mb-1">
+            <p class="text-xl md:text-2xl font-bold">copyright 2025</p>
         </div>
+        <div class="flex justify-center items-center">
+            <img src="assets/logo.png" alt="Stark Industries Logo" class="h-16 object-contain">
+            </img>
     </footer>
 
 </body>
+
 </html>
